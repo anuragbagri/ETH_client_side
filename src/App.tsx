@@ -2,6 +2,9 @@ import {   useAccount, useConnect, useConnectors, useDisconnect, WagmiProvider }
 import { createconfig } from './config'
 import {  QueryClient , QueryClientProvider} from '@tanstack/react-query'
 import './App.css'
+import totalSupply from './totalSupply'
+import Account from './Account'
+
 function App() {
 
  const client = new QueryClient();
@@ -9,6 +12,8 @@ function App() {
     <WagmiProvider config={createconfig}>   
     <QueryClientProvider  client={client}>   
        <ConnectWallet />
+       <totalSupply />
+       <Account/>
     </QueryClientProvider>
     </WagmiProvider>
   )
