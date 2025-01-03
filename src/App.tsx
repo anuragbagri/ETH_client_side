@@ -4,6 +4,7 @@ import {  QueryClient , QueryClientProvider} from '@tanstack/react-query'
 import './App.css'
 import totalSupply from './totalSupply'
 import Account from './Account'
+import { AllowUSDT } from './AllowUSDT'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     <QueryClientProvider  client={client}>   
        <ConnectWallet />
        <totalSupply />
-       <Account/>
+       <AllowUSDT/>
     </QueryClientProvider>
     </WagmiProvider>
   )
